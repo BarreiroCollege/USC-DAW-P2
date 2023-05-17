@@ -1,4 +1,4 @@
-package xyz.barreiro.usc.daw.repository;
+package xyz.barreiro.usc.daw.models.repository;
 
 import xyz.barreiro.usc.daw.models.CD;
 import xyz.barreiro.usc.daw.utils.DbConnection;

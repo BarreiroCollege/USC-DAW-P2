@@ -1,4 +1,4 @@
-package xyz.barreiro.usc.daw.servlets;
+package xyz.barreiro.usc.daw.controllers;
 
 import xyz.barreiro.usc.daw.Routes;
 

@@ -8,7 +8,7 @@
 
     <servlet>
         <servlet-name>inicio</servlet-name>
-        <servlet-class>xyz.barreiro.usc.daw.servlets.InicioServlet</servlet-class>
+        <servlet-class>xyz.barreiro.usc.daw.controllers.InicioServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>inicio</servlet-name>
@@ -19,7 +19,7 @@
 
     <servlet>
         <servlet-name>anadirCarritoServlet</servlet-name>
-        <servlet-class>xyz.barreiro.usc.daw.servlets.AnadirCarritoServlet</servlet-class>
+        <servlet-class>xyz.barreiro.usc.daw.controllers.AnadirCarritoServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>anadirCarritoServlet</servlet-name>
@@ -28,7 +28,7 @@
 
     <servlet>
         <servlet-name>carritoServlet</servlet-name>
-        <servlet-class>xyz.barreiro.usc.daw.servlets.CarritoServlet</servlet-class>
+        <servlet-class>xyz.barreiro.usc.daw.controllers.CarritoServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>carritoServlet</servlet-name>
@@ -37,7 +37,7 @@
 
     <servlet>
         <servlet-name>eliminarCarritoServlet</servlet-name>
-        <servlet-class>xyz.barreiro.usc.daw.servlets.EliminarCarritoServlet</servlet-class>
+        <servlet-class>xyz.barreiro.usc.daw.controllers.EliminarCarritoServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>eliminarCarritoServlet</servlet-name>
@@ -46,7 +46,7 @@
 
     <servlet>
         <servlet-name>pagarServlet</servlet-name>
-        <servlet-class>xyz.barreiro.usc.daw.servlets.PagarServlet</servlet-class>
+        <servlet-class>xyz.barreiro.usc.daw.controllers.PagarServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>pagarServlet</servlet-name>

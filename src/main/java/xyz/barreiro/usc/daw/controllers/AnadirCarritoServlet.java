@@ -1,9 +1,9 @@
-package xyz.barreiro.usc.daw.servlets;
+package xyz.barreiro.usc.daw.controllers;
 
 import xyz.barreiro.usc.daw.utils.Constants;
 import xyz.barreiro.usc.daw.Routes;
 import xyz.barreiro.usc.daw.models.CD;
-import xyz.barreiro.usc.daw.repository.CDRepository;
+import xyz.barreiro.usc.daw.models.repository.CDRepository;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
