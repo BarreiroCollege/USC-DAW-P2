@@ -2,14 +2,14 @@ package xyz.barreiro.usc.daw.models;
 
 import java.util.Objects;
 
-public class CD {
-    private final String id;
+public final class CD {
+    private final Integer id;
     private final String name;
     private final String artist;
     private final String country;
     private final Double price;
 
-    public CD(String id, String name, String artist, String country, Double price) {
+    public CD(Integer id, String name, String artist, String country, Double price) {
         this.id = id;
         this.name = name;
         this.artist = artist;
@@ -17,7 +17,7 @@ public class CD {
         this.price = price;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 

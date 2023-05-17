@@ -1,6 +1,6 @@
 package xyz.barreiro.usc.daw.servlets;
 
-import xyz.barreiro.usc.daw.Constants;
+import xyz.barreiro.usc.daw.utils.Constants;
 import xyz.barreiro.usc.daw.Routes;
 import xyz.barreiro.usc.daw.models.CD;
 

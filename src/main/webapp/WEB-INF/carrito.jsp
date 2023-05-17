@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<jsp:useBean id="constants" class="xyz.barreiro.usc.daw.Constants"/>
+<jsp:useBean id="constants" class="xyz.barreiro.usc.daw.utils.Constants"/>
 <jsp:useBean id="routes" class="xyz.barreiro.usc.daw.Routes"/>
 
 <html lang="es">

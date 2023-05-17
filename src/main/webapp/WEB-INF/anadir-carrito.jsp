@@ -1,7 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<jsp:useBean id="constants" class="xyz.barreiro.usc.daw.Constants"/>
-<jsp:useBean id="data" class="xyz.barreiro.usc.daw.Data"/>
+<jsp:useBean id="constants" class="xyz.barreiro.usc.daw.utils.Constants"/>
 <jsp:useBean id="routes" class="xyz.barreiro.usc.daw.Routes"/>
 
 <html lang="es">
@@ -22,7 +21,7 @@
     <form action="${routes.anadirCarrito}" method="post">
         <b>CD:</b>
         <select name="${constants.inputIdCd}">
-            <c:forEach items="${data.cdList}" var="cd">
+            <c:forEach items="${requestScope.cds}" var="cd">
                 <option value="${cd.id}">
                         ${cd.name} | ${cd.artist} | ${cd.country} | $${cd.price}
                 </option>
