@@ -1,0 +1,82 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<jsp:useBean id="constants" class="xyz.barreiro.usc.daw.Constants"/>
+<jsp:useBean id="routes" class="xyz.barreiro.usc.daw.Routes"/>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Carrito de la compra</title>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body style="background-color: #FDF5E6">
+<p align="center"
+   style="font-family: 'Times New Roman', 'Times', serif; font-size: 3em; font-weight: bold; margin-bottom: 0">
+    Carrito de la compra
+</p>
+
+<hr/>
+
+<div style="text-align: center;">
+    <c:if test="${not empty requestScope.carrito}">
+    <form action="${routes.eliminarCarrito}" method="post">
+        <table align="center" style="background-color: white;">
+            <tr>
+                <th>TÍTULO DEL CD</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Importe</th>
+                <th></th>
+            </tr>
+            <c:forEach items="${requestScope.carrito}" var="entry">
+                <tr>
+                    <td>${entry.key.name} | ${entry.key.artist} | ${entry.key.country}</td>
+                    <td>$<fmt:formatNumber type="number" minFractionDigits="2" maxFractionDigits="2"
+                                           value="${entry.key.price}"/></td>
+                    <td>${entry.value}</td>
+                    <td>$<fmt:formatNumber type="number" minFractionDigits="2" maxFractionDigits="2"
+                                           value="${entry.key.price * entry.value}"/></td>
+                    <td><input type="radio" name="${constants.inputIdCd}" value="${entry.key.id}"/></td>
+                </tr>
+            </c:forEach>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>IMPORTE TOTAL</th>
+                <th>$<fmt:formatNumber type="number" minFractionDigits="2" maxFractionDigits="2"
+                                       value="${requestScope.importe}"/></th>
+                <th><input type="submit" value="ELIMINAR"/></th>
+            </tr>
+        </table>
+        </c:if>
+    </form>
+</div>
+
+<hr/>
+
+<div style="text-align: center;">
+    <table align="center" border="0">
+        <tr>
+            <td>
+                <a href="${routes.anadirCarrito}">
+                    <button>Seguir Comprando</button>
+                </a>
+            </td>
+            <td>
+                <a href="${routes.pagar}">
+                    <button>Ir a Pagar</button>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
