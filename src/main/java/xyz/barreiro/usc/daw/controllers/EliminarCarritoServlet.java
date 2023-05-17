@@ -31,6 +31,7 @@ public class EliminarCarritoServlet extends HttpServlet {
         Integer idCd = Integer.parseInt(request.getParameter(Constants.REQUEST_ATTR__ID_CD));
         Optional<CD> cdOptional = CDRepository.getCdById(idCd);
         if (!cdOptional.isPresent()) {
+            response.sendRedirect(Routes.CARRITO);
             return;
         }
         CD cd = cdOptional.get();

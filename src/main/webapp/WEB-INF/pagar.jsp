@@ -40,12 +40,58 @@
 
 <hr/>
 
+<c:if test="${not empty sessionScope.user}">
+    <div style="text-align: center;">
+        <table align="center" style="background-color: white;">
+            <tr>
+                <td>Nombre</td>
+                <td>${sessionScope.user.name}</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>${sessionScope.user.email}</td>
+            </tr>
+            <tr>
+                <td>Tipo de Tarjeta</td>
+                <td>${sessionScope.user.cardType.fancyName}</td>
+            </tr>
+            <tr>
+                <td>Número de Tarjeta</td>
+                <td>${sessionScope.user.cardNumber}</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr/>
+</c:if>
+
 <div style="text-align: center;">
-    <form action="${routes.pagar}" method="post">
-        <button type="submit">
-            Pagar y Volver
-        </button>
-    </form>
+    <c:choose>
+        <c:when test="${not empty sessionScope.user}">
+            <form action="${routes.pagar}" method="post">
+                <button type="submit">
+                    Pagar y Volver
+                </button>
+            </form>
+        </c:when>
+
+        <c:otherwise>
+            <table align="center" border="0">
+                <tr>
+                    <td>
+                        <a href="${routes.iniciarSesion}">
+                            <button>Iniciar Sesión</button>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="${routes.registrarse}">
+                            <button>Registrarse</button>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </c:otherwise>
+    </c:choose>
 </div>
 
 </body>

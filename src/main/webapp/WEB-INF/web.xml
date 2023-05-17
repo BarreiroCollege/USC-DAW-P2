@@ -53,4 +53,31 @@
         <url-pattern>/pagar</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>confirmacionCompra</servlet-name>
+        <servlet-class>xyz.barreiro.usc.daw.controllers.ConfirmacionCompraServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>confirmacionCompra</servlet-name>
+        <url-pattern>/confirmacion-compra</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>iniciarSesionServlet</servlet-name>
+        <servlet-class>xyz.barreiro.usc.daw.controllers.IniciarSesionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>iniciarSesionServlet</servlet-name>
+        <url-pattern>/iniciar-sesion</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>registrarseServlet</servlet-name>
+        <servlet-class>xyz.barreiro.usc.daw.controllers.RegistrarseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>registrarseServlet</servlet-name>
+        <url-pattern>/registrarse</url-pattern>
+    </servlet-mapping>
+
 </web-app>

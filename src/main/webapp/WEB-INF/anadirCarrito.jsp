@@ -28,7 +28,7 @@
             </c:forEach>
         </select>
         <b>Cantidad:</b>
-        <input type="text" name="${constants.inputCantidad}" value="1">
+        <input type="text" name="${constants.inputCantidad}" value="1" required>
         <p>
         <div style="text-align: center;">
             <input type="submit" value="Selecciona Producto">
